@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fade In & Fade Out</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      .box {
+        width: 200px;
+        height: 100px;
+        margin: 10px;
+        background-color: lightblue;
+        display: none; /* Initially hidden */
+        text-align: center;
+        line-height: 100px;
+        font-weight: bold;
+      }
+      h1 {
+        text-align: center;
+        text-decoration-color: black;
+      }
+      body {
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>FadeIn / FadeOut</h1>
+    <p>click on the given buttons to see the change:</p>
+    <button id="fadeInBtn">Fade In</button>
+    <button id="fadeOutBtn">Fade Out</button>
+
+    <div class="box">Div 1</div>
+    <div class="box">Div 2</div>
+    <div class="box">Div 3</div>
+
+    <script>
+      $(document).ready(function () {
+        $("#fadeInBtn").click(function () {
+          $(".box").fadeIn(1000); // Fade in over 1 second
+        });
+
+        $("#fadeOutBtn").click(function () {
+          $(".box").fadeOut(1000); // Fade out over 1 second
+        });
+      });
+    </script>
+  </body>
+</html>
